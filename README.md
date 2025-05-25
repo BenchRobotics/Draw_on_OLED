@@ -1,5 +1,5 @@
 
-# WiFi OLED UDP Display
+# Draw on OLED WiFi
 
 You can draw on the 1.3" or 0.9" OLED display like an IPAD. It is very annoying making the UI for OLED, so I made a small ESP32 program and an Android app that will allow me to draw the UI on the OLED screen. These are your normal OLEDs used with Arduino and ESP32.
 
