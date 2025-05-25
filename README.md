@@ -7,6 +7,8 @@ ESP32 microcontroller to connect to a WiFi network and receive UDP packets to co
 
 [Full tutorial at Bench Robotics](https://benchrobotics.com/?p=836&preview=1&_ppp=10fc40b501)
 
+![Project Demo](https://github.com/BenchRobotics/Draw_on_OLED/blob/main/DSC00402.JPG)
+
 ### Oled_Draw_Wifi_SSD1306
 Use this for a 0.9" 128X64 OLED display, most common.
 ![0.9" SSD1306 OLED](https://github.com/BenchRobotics/Draw_on_OLED/blob/main/SSD1306-OLED-Display-Pinout.jpg)
