@@ -7,9 +7,11 @@ ESP32 microcontroller to connect to a WiFi network and receive UDP packets to co
 
 ### Oled_Draw_Wifi_SSD1306
 Use this for a 0.9" 128X64 OLED display, most common.
+![0.9" SSD1306 OLED](https://github.com/BenchRobotics/Draw_on_OLED/blob/main/SSD1306-OLED-Display-Pinout.jpg)
 
 ### Oled_Draw_Wifi_1_3_inch
 Use this if you have a 1.3" SH1107 display; it is bigger. Not so common to get.
+![1.3" SH1107 OLED](https://github.com/BenchRobotics/Draw_on_OLED/blob/main/1-3_inch_SH1107.png)
 
 ## Requirements
 
