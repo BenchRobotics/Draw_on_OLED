@@ -28,6 +28,9 @@ To install them:
 
 ## Hardware Wiring
 
+![Circuit Diagram](https://github.com/BenchRobotics/Draw_on_OLED/raw/main/circuit%20diagram.png)
+
+
 Connect the SSD1306 OLED or the SH1107 OLED display to the ESP32 using I2C:
 
 | OLED Pin | ESP32 Pin |
