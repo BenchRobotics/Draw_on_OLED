@@ -1,7 +1,15 @@
 
 # WiFi OLED UDP Display
 
-This project allows an ESP32 microcontroller to connect to a WiFi network and receive UDP packets to control an OLED display (SSD1306). The received packets contain pixel coordinates and their state (ON/OFF), enabling remote manipulation of the display.
+You can draw on the 1.3" or 0.9" OLED display like an IPAD. It is very annoying making the UI for OLED, so I made a small ESP32 program and an Android app that will allow me to draw the UI on the OLED screen. These are your normal OLEDs used with Arduino and ESP32.
+
+ESP32 microcontroller to connect to a WiFi network and receive UDP packets to control an OLED display (SSD1306 or SH1107). The received packets contain pixel coordinates and their state (ON/OFF), enabling remote manipulation of the display. There are two programs
+
+### Oled_Draw_Wifi_SSD1306
+Use this for a 0.9" 128X64 OLED display, most common.
+
+### Oled_Draw_Wifi_1_3_inch
+Use this if you have a 1.3" SH1107 display; it is bigger. Not so common to get.
 
 ## Requirements
 
@@ -11,6 +19,7 @@ Ensure you have the following libraries installed in your Arduino IDE:
 - [WiFiUdp](https://www.arduino.cc/en/Reference/WiFiUDP)
 - [Adafruit GFX Library](https://github.com/adafruit/Adafruit-GFX-Library)
 - [Adafruit SSD1306 Library](https://github.com/adafruit/Adafruit_SSD1306)
+- [Adafruit SH110X Library](https://github.com/adafruit/Adafruit_SH110X)
 
 To install them:
 1. Open Arduino IDE.
@@ -19,7 +28,7 @@ To install them:
 
 ## Hardware Wiring
 
-Connect the SSD1306 OLED display to the ESP32 using I2C:
+Connect the SSD1306 OLED or the SH1107 OLED display to the ESP32 using I2C:
 
 | OLED Pin | ESP32 Pin |
 |----------|----------|
