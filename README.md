@@ -3,17 +3,18 @@
 
 You can draw on the 1.3" or 0.9" OLED display like an IPAD. It is very annoying making the UI for OLED, so I made a small ESP32 program and an Android app that will allow me to draw the UI on the OLED screen. These are your normal OLEDs used with Arduino and ESP32.
 
-ESP32 microcontroller to connect to a WiFi network and receive UDP packets to control an OLED display (SSD1306 or SH1107). The received packets contain pixel coordinates and their state (ON/OFF), enabling remote manipulation of the display. There are two programs
+ESP32 microcontroller to connect to a WiFi network and receive UDP packets to control an OLED display (SSD1306 or SH1107). The received packets contain pixel coordinates and their state (ON/OFF), enabling remote manipulation of the display. 
 
 [Full tutorial at Bench Robotics](https://benchrobotics.com/?p=836&preview=1&_ppp=10fc40b501)
 
 ![Project Demo](https://github.com/BenchRobotics/Draw_on_OLED/blob/main/DSC00402.JPG)
 
-### Oled_Draw_Wifi_SSD1306
+## There are two programs
+### 1. Oled_Draw_Wifi_SSD1306
 Use this for a 0.9" 128X64 OLED display, most common.
 ![0.9" SSD1306 OLED](https://github.com/BenchRobotics/Draw_on_OLED/blob/main/SSD1306-OLED-Display-Pinout.jpg)
 
-### Oled_Draw_Wifi_1_3_inch
+### 2. Oled_Draw_Wifi_1_3_inch
 Use this if you have a 1.3" SH1107 display; it is bigger. Not so common to get.
 ![1.3" SH1107 OLED](https://github.com/BenchRobotics/Draw_on_OLED/blob/main/1-3_inch_SH1107.png)
 
