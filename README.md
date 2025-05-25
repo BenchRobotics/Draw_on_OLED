@@ -1,42 +1,69 @@
-Before uploading the code, make sure you have:
 
-Arduino IDE installed (Download here)
+# WiFi OLED UDP Display
 
-ESP32 board support installed in Arduino IDE:
+This project allows an ESP32 microcontroller to connect to a WiFi network and receive UDP packets to control an OLED display (SSD1306). The received packets contain pixel coordinates and their state (ON/OFF), enabling remote manipulation of the display.
 
-Go to File > Preferences
+## Requirements
 
-Add this URL to Additional Board URLs:
-https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+### Libraries
+Ensure you have the following libraries installed in your Arduino IDE:
+- [WiFi](https://www.arduino.cc/en/Reference/WiFi)
+- [WiFiUdp](https://www.arduino.cc/en/Reference/WiFiUDP)
+- [Adafruit GFX Library](https://github.com/adafruit/Adafruit-GFX-Library)
+- [Adafruit SSD1306 Library](https://github.com/adafruit/Adafruit_SSD1306)
 
-Open Tools > Board > Board Manager, search for ESP32, and install it
+To install them:
+1. Open Arduino IDE.
+2. Go to `Sketch > Include Library > Manage Libraries`.
+3. Search for each library and click `Install`.
 
-📚 Install Required Libraries
-Go to Sketch > Include Library > Manage Libraries, and install:
+## Hardware Wiring
 
-Adafruit GFX
+Connect the SSD1306 OLED display to the ESP32 using I2C:
 
-Adafruit SH110X
+| OLED Pin | ESP32 Pin |
+|----------|----------|
+| VCC      | 3.3V     |
+| GND      | GND      |
+| SCL      | GPIO22   |
+| SDA      | GPIO21   |
 
-Search for each by name and click Install.
+## Uploading the Program
 
-🔌 Wiring (I2C)
-Connect your SH1107 OLED to the ESP32:
+1. Open the Arduino IDE.
+2. Select `ESP32` as the board (`Tools > Board`).
+3. Choose the appropriate COM port (`Tools > Port`).
+4. Copy the provided code into the Arduino sketch.
+5. Click the **Upload** button.
 
-OLED Pin	ESP32 Pin
-VCC	3.3V
-GND	GND
-SCL	GPIO 22
-SDA	GPIO 21
+## Connecting to WiFi & Getting ESP32 IP Address
 
-⬆️ Uploading the Code
-Open the .ino file in Arduino IDE
+Once the program is uploaded:
 
-Select your board:
-Tools > Board > ESP32 Dev Module
+1. Open the **Serial Monitor** (`Tools > Serial Monitor`).
+2. Set the baud rate to **115200**.
+3. The ESP32 will attempt to connect to the WiFi network.
+4. Once connected, it will print the assigned **IP Address**.
+5. Use this IP for sending UDP packets to control the OLED display.
 
-Select the correct COM port under Tools > Port
+## Usage
 
-Click Upload (the ➜ button)
+Send UDP packets to the ESP32 in the following format: x,y,state
 
-Once uploaded, open the Serial Monitor to see WiFi connection status and IP address.
+- `x, y` → Pixel coordinates (must be within 128x64).
+- `state` → `1` for ON, `0` for OFF.
+
+Example UDP message: 10,20,1
+
+This will turn on the pixel at (10,20).
+
+## Notes
+
+- Ensure the OLED display supports **I2C communication**.
+- The default UDP port is `12345`; change it in the code if necessary.
+- Debugging messages can be viewed in the **Serial Monitor**.
+
+---
+
+
+
