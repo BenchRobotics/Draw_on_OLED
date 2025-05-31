@@ -5,7 +5,7 @@ You can draw on the 1.3" or 0.9" OLED display like an IPAD. It is very annoying 
 
 ESP32 microcontroller to connect to a WiFi network and receive UDP packets to control an OLED display (SSD1306 or SH1107). The received packets contain pixel coordinates and their state (ON/OFF), enabling remote manipulation of the display. 
 
-[Full tutorial at Bench Robotics](https://benchrobotics.com/?p=836&preview=1&_ppp=10fc40b501)
+[Full tutorial at Bench Robotics](https://benchrobotics.com/arduino/drawing-on-esp32-oled-screen/)
 
 ![Project Demo](https://github.com/BenchRobotics/Draw_on_OLED/blob/main/DSC00402.JPG)
 
